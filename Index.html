@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Play Media</title>
+</head>
+<body>
+    <video id="myVideo" width="600" controls autoplay muted>
+        <source src="your-video-file.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <audio id="myAudio" controls autoplay>
+        <source src="your-audio-file.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        // Ensuring autoplay works by starting playback programmatically
+        window.addEventListener('load', function() {
+            var video = document.getElementById('myVideo');
+            var audio = document.getElementById('myAudio');
+            video.play();
+            audio.play();
+        });
+    </script>
+</body>
+</html>
